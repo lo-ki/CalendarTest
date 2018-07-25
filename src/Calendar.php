@@ -46,7 +46,10 @@ class Calendar implements CalendarInterface
 		}
 
 		public function getFirstWeek() {
+			$year = $this->getCurrentYear();
+			$month = $this->getCurrentMonth();
 
+			return $this->getDaysInWeek($year, $month, 1);
 		}
 
 		public function getCalendar() {
