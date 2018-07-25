@@ -3,7 +3,7 @@ namespace Calendar;
 
 use \DateTime;
 
-class Calendar 
+class Calendar implements CalendarInterface
 {
 	private $datetime = false;
 
@@ -43,6 +43,10 @@ class Calendar
 			$date->modify('-1 month');
 
 			return (int) $date->format('t');
+		}
+
+		public function getFirstWeek() {
+
 		}
 
 		public function getCalendar() {
